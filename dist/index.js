@@ -31242,11 +31242,11 @@ function requireGithub () {
 var githubExports = requireGithub();
 
 try {
-  coreExports.setOutput('greeting', outputValue);
   // `name` input defined in action metadata file
   const name = coreExports.getInput('name');
   const outputValue = `Hello ${name}!!!!!!`;
   coreExports.info(outputValue);
+  coreExports.setOutput('greeting', outputValue);
 
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(githubExports.context.payload, undefined, 2);

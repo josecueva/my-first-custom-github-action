@@ -1,8 +1,6 @@
 import * as core from '@actions/core';
 import * as github from "@actions/github";
 
-
-
 try {
   // `name` input defined in action metadata file
   const name = core.getInput('name');
